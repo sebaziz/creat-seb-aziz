@@ -1,0 +1,149 @@
+
+<!--<div class="row m-t-lg">-->
+    <!--<div class="col-md-12 m-t-lg">-->
+        <!--<div class="m-l-lg col-md-3 jumbotron" ng-if="userStat === true">-->
+            <!--<h3 class="card-title">Create New Order</h3>-->
+            <!--<div class="card-text">-->
+                <!--<form name="orderForm" class="form-horizontal order-form" ng-submit="submitOrder(order)">-->
+                    <!--<fieldset class="form-group">-->
+                        <!--<label for="title">Title</label>-->
+                        <!--<input type="text" class="form-control" id="title" ng-model="order.title" placeholder="The Nein Cat">-->
+                        <!--<small class="text-muted">Title of the new order that you're creating.</small>-->
+                    <!--</fieldset>-->
+                    <!--<fieldset class="form-group">-->
+                        <!--<label for="img">Picture</label>-->
+                        <!--<input type="text" class="form-control" id="img" ng-model="order.img" placeholder="http://blahblahblah.jpg">-->
+                    <!--</fieldset>-->
+                    <!--<fieldset class="form-group">-->
+                        <!--<label for="content">Content </label>-->
+                        <!--<textarea class="form-control" ng-model="order.content" id="content" rows="3"></textarea>-->
+                    <!--</fieldset>-->
+                    <!--<button type="submit" class="btn btn-primary">Save Order</button>-->
+                <!--</form>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<div ng-class="(userStat === true) ? 'm-l-md col-md-8' : 'col-md-12'">-->
+
+            <!--<div infinite-scroll='loadMore()' infinite-scroll-immediate-check="false" infinite-scroll-disabled='isBusy'>-->
+                <!--<div class="col-md-12" ng-repeat="item in infiniteOrders | orderBy : 'created' : true" style="float:none">-->
+                    <!--<div class="card" style="word-break: break-all">-->
+                        <!--<div class="card-block">-->
+                            <!--<h4 class="card-title">{{item.title}} </h4>-->
+                            <!--<h7 class="card-subtitle text-muted">-->
+                                <!--Published by {{item.author.username}} on {{item.created | dateFormat : 'L, HH[h]mm'}}-->
+                            <!--</h7>-->
+                        <!--</div>-->
+                        <!--<div class="row">-->
+                            <!--<div class="order-img m-l-lg col-md-5">-->
+                                <!--<img ng-src="{{item.img | validatePicture}}" alt="Card image">-->
+                            <!--</div>-->
+                            <!--<div class="card-block p-t-0 col-md-5 ">-->
+                                <!--<div class="card-text break-content">{{item.content}}</div>-->
+                                <!--<a ng-href="/order/profile/{{item.id}}" class="card-link"> Read more </a>-->
+                                <!--<a ng-href="/order/update/{{item.id}}" class="text-warning card-link"-->
+                                   <!--ng-if="userStat | checkAccessibility : item.author.id : user"> Update </a>-->
+                                <!--<a href="#" ng-click="delete(item.id, item.title)" class="text-danger card-link"-->
+                                   <!--ng-if="userStat | checkAccessibility : item.author.id : user"> Delete </a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<p class="clear"></p>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<div class="col-md-10 col-sm-12 mt-xl col-md-offset-1">
+
+    <section class="mt-lg text-center" style="background-color: #ffffff">
+        <div>
+            <h4 class="pt-xl pb-md">Martériel nécessaire</h4>
+           <hr class="mb-lg">
+           <div class="row col-md-10 col-sm-12 col-md-offset-1">
+             <img src="../../public/seb0.png" src="#" alt="" style="height: 200px; width: 200px"><br><br><br>
+               <p>Une bonne nouvelle pour commencer, il ne vous faudra pas beaucoup de matériel pour réussir une bonne prise de photos en mode 360°.</p>
+               <p>Idéalement un reflex cela va de soit, mais certains compacts, bridges ou micro 4/3 permettent un rendu impeccable et un niveau de détail irréprochable.</p>
+               <p>Ceci dit, un simple smartphone pourra convenir, tant les l’évolution en matière de photographie est considérable, pour arriver au niveau des APN les plus performants.</p>
+               <p>Il vous faudra bien évidemment un ordinateur pour pouvoir uploader les photos par la suite.</p>
+           </div>
+            <div class ng-repeat="member in team">
+                <div class="mt-lg col-md-4 col-sm-12">
+                        <img src="../../public/seb0.png" class="img-rounded" style="height: 200px; width: 200px"><br>
+                </div>
+            </div>
+        </div>
+        <p class="clear"></p>
+    </section>
+
+
+    <section class="mt-lg text-center" style="background-color: #ffffff">
+        <div>
+            <h4 class="pt-xl pb-md">La prise de vue</h4>
+            <hr class="mb-lg">
+            <div class="row col-md-10 col-sm-12 col-md-offset-1">
+                <img src="../../public/seb1.png" src="#" alt="" style="height: 100px; width: 400px">
+                <p>Assurez-vous d’être à la bonne distance pour un balayage totale de l’objet.</p><br><br>
+                <img src="../../public/seb2.png" src="#" alt="" style="height: 200px; width: 400px">
+                <p>Respectez une distance d’au moins 20 cm entre chaque cliché.</p><br><br>
+                <img src="../../public/helmet_opt.gif" src="#" alt="" style="height: 200px; width: 200px"><br>
+                Pour une prise rapprochée, vous pouvez vous aidez de repères numérotés</p><br><br>
+                <img src="../../public/lion_opt.gif" src="#" alt="" style="height: 200px; width: 200px">
+                <p>Pour un objet de plus grande taille, respectez au moins une distance d’un mètre à intervalles rapprochés de 20 à 30 cm.</p><br><br>
+            </div>
+        </div>
+        <p class="clear"></p>
+    </section>
+
+
+
+    <section class="mt-lg text-center" style="background-color: #ffffff">
+        <div>
+            <h4 class="pt-xl pb-md">Envoyez vos photos à notre équipe de modélisation !</h4>
+            <hr class="mb-lg">
+            <div class="row col-md-10 col-sm-12 col-md-offset-1">
+                
+        <p>Icône du fichier (JPG, PNG ou GIF | max. 15 Ko) <p>
+        <button ngf-select="uploadFiles($files)" multiple
+        accept="image/*">Selection des images</button>
+        
+        <br>Fichiers:
+        <ul>
+            <li ng-repeat="f in files" style="font:smaller">
+                {{f.name}}
+            </li>
+        </ul>
+
+        <span class="progress" ng-show="progress >= 0">
+            <div style="width:{{progress}}%" ng-bind="progress + '%'"></div>
+        </span>
+        {{errorMsg}}
+            </div>
+        </div>
+        <p class="clear"></p>
+    </section>
+
+
+    <section>
+      <section class="mt-lg mb-lg text-center" >
+        <div>
+            <hr class="mb-lg">
+                <h5>Creative 3D PUZZLE</h5><p>
+
+                <h15><p>Découvrez le monde du puzzle ! Les amateurs de puzzles entrent dans un nouveau monde au fur et à mesure que les pièces s'assemblent. </p></h15>
+            <hr class="mb-lg">
+                <div class="copyright" style="color: #58ACFA">
+                    © <span id="copyright-year"></span> Creative PUZZLE 3D. All Rights Reserved
+                </div>
+         </div>
+        <div class="well5 center" style="color: #58ACFA">
+        <div class="copyright">
+           <p> Desgin by Sébastien AZIZ </p>
+           
+        </div>
+    </section>
+
+</div>

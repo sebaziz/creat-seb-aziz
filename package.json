@@ -1,0 +1,43 @@
+{
+  "name": "meinblog",
+  "version": "1.0.0",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.8.4",
+    "cookie-parser": "^1.3.5",
+    "express": "^4.13.3",
+    "express-session": "^1.11.2",
+    "mongoose": "^4.2.4",
+    "morgan": "^1.3.2",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^1.0.0",
+    "path": "^0.12.7"
+  },
+  "description": "A 3 person group project with the goal of creating a Blog using MongoDB, ExpressJs, AngularJS and NodeJS.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ChuaMichelle/TWEB_MEAN.git"
+  },
+  "keywords": [
+    "ETNA",
+    "MongoDB",
+    "ExpressJs",
+    "AngularJS",
+    "NodeJS",
+    "Blog",
+    "Adolf",
+    "Hitler"
+  ],
+  "author": "Michelle Chua, Sébastien Aziz, Antoine Mahieu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChuaMichelle/TWEB_MEAN/issues"
+  },
+  "homepage": "https://github.com/ChuaMichelle/TWEB_MEAN#readme"
+}

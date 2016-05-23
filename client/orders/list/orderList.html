@@ -1,0 +1,33 @@
+<div class="row m-t-lg">
+    <div class="col-md-12 m-t-lg">
+        <div class="" ng-class="(userStat === true) ? 'm-l-md col-md-8' : 'col-md-12'">
+            <div infinite-scroll='loadMore()' infinite-scroll-immediate-check="false" infinite-scroll-disabled='isBusy'>
+                <div class="col-md-12" ng-repeat="item in infiniteOrders | filter: search" style="float:none">
+                    <div class="card" style="word-break: break-all">
+                        <div class="card-block">
+                            <h4 class="card-title">{{item.title}} </h4>
+                            <h7 class="card-subtitle text-muted">
+                                Published by {{item.author.username}} on {{item.created | dateFormat : 'L, HH[h]mm'}}
+                            </h7>
+                        </div>
+                        <div class="row">
+                            <div class="order-img m-l-lg col-md-5">
+                                <img ng-src="{{item.img | validatePicture}}" alt="Card image">
+                            </div>
+                            <div class="card-block p-t-0 col-md-5 ">
+                                <div class="card-text break-content">{{item.content}}</div>
+                                <a ng-href="/order/profile/{{item.id}}" class="card-link"> Read more </a>
+                                <a ng-href="/order/update/{{item.id}}" class="text-warning card-link"
+                                   ng-if="userStat | checkAccessibility : item.author.id : user"> Update </a>
+                                <a href="#" ng-click="delete(item.id, item.title)" class="text-danger card-link"
+                                   ng-if="userStat | checkAccessibility : item.author.id : user"> Delete </a>
+                            </div>
+                        </div>
+                        <p class="clear"></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

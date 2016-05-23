@@ -1,0 +1,25 @@
+<div class="row m-t-lg">
+    <div class="col-md-offset-1 col-md-10 m-t-lg">
+        <div class="card card-block">
+            <h3 class="card-title"> Modify : {{title}} </h3>
+            <div class="card-text">
+                <form name="orderForm" class="form-horizontal order-form" ng-submit="submit()">
+                    <fieldset class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" ng-model="order.title" placeholder="The Nein Cat">
+                        <small class="text-muted">Title of the new order that you're creating.</small>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="img">Picture</label>
+                        <input type="text" class="form-control" id="img" ng-model="order.img" placeholder="http://blahblahblah.jpg">
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="content">Content </label>
+                        <textarea class="form-control" ng-model="order.content" id="content" rows="3"></textarea>
+                    </fieldset>
+                    <button type="submit" class="col-lg-offset-10 btn btn-primary">Update Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

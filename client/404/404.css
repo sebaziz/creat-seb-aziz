@@ -1,0 +1,10 @@
+a.drunk:link {
+    color:#FFB400 !important;
+}
+a.drunk:visited {
+    color:#FF9900;
+}
+a.drunk:hover {
+    font-size:150%;
+    text-decoration: none;
+}

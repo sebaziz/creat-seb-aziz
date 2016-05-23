@@ -1,0 +1,21 @@
+<div class="row m-t-lg p-a-md" style="color: #ffffff">
+    <div class="col-md-offset-2 m-t-lg col-md-8">
+        <div class="card card-block">
+            <h3 class="card-title">Connexion</h3>
+            <h6 class="card-subtitle text-muted">DÉJÀ CLIENT ?</h6>
+            <div class="card-text m-t-md">
+                <form name="loginForm" class="form-horizontal order-form" ng-submit="submitLogin()">
+                    <fieldset class="form-group">
+                        <label for="username">Login</label>
+                        <input type="text" class="form-control" id="username" ng-model="user.username" placeholder="Sebastien" autofocus>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" class="form-control" id="password" ng-model="user.password">
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary">Se Connecter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

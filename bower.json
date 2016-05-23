@@ -1,0 +1,43 @@
+{
+  "name": "creative",
+  "version": "1.0.0",
+  "authors": [
+    "Sébastien Aziz",
+    "Guillaume Bazire"
+  ],
+  "description": "A 2 person group school project using MongoDB, ExpressJs, AngularJS and NodeJS.",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "ETNA",
+    "MongoDB",
+    "ExpressJs",
+    "AngularJs",
+    "NodeJs",
+    "PLI",
+    "Puzzle"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "jquery": "~2.1.4",
+    "bootstrap": "4.0",
+    "angular-route": "~1.4.7",
+    "font-awesome": "fontawesome#~4.4.0",
+    "moment": "~2.10.6",
+    "angular-ui-notification": "~0.1.0",
+    "ngInfiniteScroll": "~1.2.1",
+    "angularUtils-pagination": "angular-utils-pagination#~0.9.2",
+    "wow": "wowjs#~1.1.2",
+    "ng-file-upload": "~12.0.4",
+    "ng-file-upload-shim": "~12.0.4"
+  }
+}

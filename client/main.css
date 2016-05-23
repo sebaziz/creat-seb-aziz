@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+    /*font-family: 'Roboto', sans-serif;*/
+    color: #808289;
+    font: 400 15px "Roboto", sans-serif;
+    letter-spacing: 1px;
+    line-height: 25px;
+    overflow-x: hidden;
+    background-color: #10223a;
+}
+
+.container {
+    margin-top: 5%;
+}
+
+/*sdqsd*/
+
+.thumb {
+    width: 24px;
+    height: 24px;
+    float: none;
+    position: relative;
+    top: 7px;
+}
+form .progress {
+    line-height: 15px;
+}
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+}
+.progress div {
+    font-size: smaller;
+    background: orange;
+    width: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+hr {
+    max-width: 106px;
+    height: 3px;
+    border: none;
+    background: #4280c9;
+}

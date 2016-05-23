@@ -1,0 +1,29 @@
+
+<div class="row" ng-if="user">
+    <form name="commentsForm" class="form-horizontal jumbotron" ng-submit="submitComment(comment)">
+        <fieldset class="form-group">
+            <label for="content">Leave a Comment: </label>
+            <textarea class="form-control" ng-model="comment" id="content" rows="3"></textarea>
+        </fieldset>
+        <div class="text-right">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div class="row m-b-md">
+    <div class="media" ng-repeat="item in comments | orderBy:'created':true">
+        <a class="pull-left m-r-md" href="#">
+            <img class="media-object commentPic" src="/public/nyein.png" alt="cat">
+        </a>
+        <div class="media-body">
+            <h4 class="media-heading"> {{ item.authorName }}
+                <span class="commentSmallInfo"> {{ item.created | dateFormat : '[commented on] L, HH[h]mm'}} </span>
+            </h4>
+            {{ item.comment }}
+        </div>
+        <div class="media-footer">
+            <a ng-href="#" class="text-danger card-link" ng-if="user | checkAccessibility : item.author : user" ng-click="deleteComment(item._id)"> delete </a>
+        </div>
+    </div>
+</div>

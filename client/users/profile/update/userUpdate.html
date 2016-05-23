@@ -1,0 +1,52 @@
+<div class="row m-t-lg" style="color: #ffffff">
+    <div class="col-md-offset-1 col-md-10 m-t-lg">
+        <div class="card card-block">
+            <h3 class="card-title"> Utilisateur : {{username}} </h3>
+            <div class="card-text">
+                <form name="orderForm" class="form-horizontal order-form" ng-submit="submit()">
+                    <fieldset class="f-group">
+                        <label for="title">Login</label>
+                        <input type="text" class="form-control" id="title" ng-model="user.username" placeholder="Mickey">
+                        <small class="text-muted"></small>
+                    </fieldset><br>
+                    <fieldset class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="text" class="form-control" id="email" ng-model="user.email" placeholder="mickey@disney.com">
+                    </fieldset>
+                    
+                    <fieldset class="form-group" ng-if="loggedUser.role === 0">
+                        Role
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="user.role" value="0">
+                                Administrator - Has the extra permission to edit / delete orders and comments of all users.
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="user.role" value="1">
+                                Normal - Has the extra permission to create / edit / delete orders and leave commentary notes on all orders.
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group" ng-if="loggedUser.role === 0">
+                        Accessibility
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="user.access" value="0">
+                                Normal - Can log in in the blog.
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" ng-model="user.access" value="1">
+                                Blocked - Cannot log in the blog.
+                            </label>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="col-lg-offset-10 btn btn-primary">Mis à jour</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

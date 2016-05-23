@@ -1,0 +1,41 @@
+<div class="content">
+    <nav class="navbar navbar-fixed-top navbar-dark bg-inverse" style="background-color: #4280c9;">
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+            &#9776;
+        </button>
+        <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+
+            <a class="navbar-brand bold" href="/" style="color: #C99942">
+                <img src="public/logo1.png" alt="" style="height: 35px; position: absolute;"/>
+                <div style="margin-left: 55px; margin-top: 5px; color: #10223a; font-weight: bold">Creative 3D PUZZLE</div>
+            </a>
+            <ul class="nav navbar-nav col-lg-offset-5">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/orders" ng-if="user"> Réaliser son projet </a>
+                </li>
+                <!--li class="nav-item">
+                    <a class="nav-link" href="/orders/list">List</a>
+                </li-->
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/listUsers" ng-if="user.role === 0">UserList</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
+                       role="button" aria-haspopup="true" aria-expanded="false">
+                        {{user ? user.username : "Rejoignez-nous!"}}
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" ng-href="/user/profile/{{user.id}}" ng-if="user">Profil</a>
+                        <a class="dropdown-item" href="/signUp" ng-if="!user">Inscrivez-vous</a>
+                        <a class="dropdown-item" href="/login" ng-if="!user">Connexion</a>
+                        <div class="dropdown-divider" ng-if="user"></div>
+                        <a class="dropdown-item" href="/logout" ng-if="user">Déconnexion</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

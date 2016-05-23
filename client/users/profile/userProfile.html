@@ -1,0 +1,39 @@
+<div class="row m-t-lg" style="color: #ffffff">
+    <div class="col-md-12 p-a-lg">
+        <div class="col-md-8 col-md-offset-2" style="float:none">
+            <div class="card" style="word-break: break-all">
+                <img src="../../public/sebastien_aziz.jpg" class="img-rounded pull-left img-responsive m-a-md" alt="..." style="height: 200px;">
+                <div class="card-block p-t-lg p-b-0">
+                    <h4 class="card-title">
+                        {{user.username}}
+                        <a class="label label-warning" ng-href="/user/update/{{user._id}}" style="font-size: small">Modification</a>
+                        <a class="label label-danger" ng-click="deleteAccount()" style="font-size: small">Suppression du compte</a>
+                    </h4>
+                </div>
+                <div class="row">
+                    <div class="card-block p-a-0 col-md-8">
+                        <div class="card-text">
+                            <table class="table table-reflow table-responsive">
+                                <thead class="">
+                                <tr>
+                                    <th>Email</th>
+                                    <th>Mis à jour</th>
+                                    <th>Date de l'inscription</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>{{user.email}}</td>
+                                    <td>{{user.updated | dateFormat : 'L, HH[h]mm'}}</td>
+                                    <td>{{user.created | dateFormat : 'L, HH[h]mm'}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<user-order></user-order>

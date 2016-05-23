@@ -1,0 +1,48 @@
+.order-img {
+    height: 180px;
+    width: 30%;
+    text-align: center;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.order-img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.profile-img img{
+    max-width: 100%;
+}
+
+ul#profile-info {
+    padding: 0;
+}
+
+ul#profile-info li {
+    display: inline;
+}
+
+ul#profile-info li span {
+    padding: 10px 5%;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+}
+
+img.commentPic {
+    width: 64px; /* you can use % */
+    height: auto;
+}
+
+.commentSmallInfo {
+    font-size: 14px;
+    color: #818a91;
+}
+
+.break-content {
+    max-height: 330px;
+    overflow:hidden;
+    text-overflow :ellipsis;
+    white-space: pre-line;
+}
+/*style="float:none"*/

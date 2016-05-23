@@ -1,0 +1,49 @@
+
+<div class="row m-t-lg center">
+    <div class="col-md-offset-1 col-md-10">
+
+        <hr class="m-y-md">
+
+        <div class="row">
+            <div class="profile-img col-md-3">
+                <img ng-src="{{order.img | validatePicture}}" alt="Card image">
+            </div>
+            <div class="col-md-9 p-l-md">
+
+                <h1> {{order.title}}
+                    <span ng-if="userStat | checkAccessibility : order.author.id : user" style="font-size: 17px;">
+                        <a ng-href="/order/update/{{order._id}}" class="label label-info">Update</a>
+                        <a class="label label-danger" ng-click="delete(order._id, order.title)">Delete</a>
+                    </span>
+                </h1>
+                <ul id="profile-info">
+                    <li>
+                        <span class="p-l-0">
+                            <i class="fa fa-user fa-lg"></i> {{order.author.username}}
+                        </span> |
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa fa-clock-o fa-lg"></i> {{order.created | dateFormat : 'MMMM Do YYYY, HH[h]mm'}}
+
+                        </span> |
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa fa-repeat fa-lg"></i> {{order.updated | dateFormat :  'MMMM Do YYYY, HH[h]mm'}}
+                        </span>
+                    </li>
+                </ul>
+                <div class="row p-t-lg">
+                    {{order.content}}
+                </div>
+            </div>
+        </div>
+
+        <hr class="m-y-md">
+        <comments user="user"></comments>
+
+    </div>
+</div>
+
+

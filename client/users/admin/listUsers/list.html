@@ -1,0 +1,50 @@
+<div class="row m-t-lg">
+    <div class="col-md-12 p-a-lg">
+
+        <div infinite-scroll='loadMore()' infinite-scroll-immediate-check="false" infinite-scroll-disabled='isBusy'>
+            <div class="col-md-8 col-md-offset-2" ng-repeat="item in infiniteUsers" style="float:none">
+                <div class="card" style="word-break: break-all">
+                    <img src="/public/nyein.png" class="img-rounded pull-left img-responsive m-a-md" alt="..." style="height: 200px;">
+                    <div class="card-block p-t-lg p-b-0">
+                        <h4 class="card-title">
+                            <a ng-href="/user/profile/{{item.id}}">{{item.username}}</a>
+                            <a class="label label-warning" ng-href="/user/update/{{item.id}}" style="font-size: small">Edit</a>
+                            <a class="label label-danger" ng-if="item.role === 1" style="font-size: small">Delete</a>
+                        </h4>
+                    </div>
+                    <div class="row">
+                        <div class="card-block p-a-0 col-md-8">
+                            <div class="card-text">
+                                <table class="table table-reflow table-responsive">
+                                    <thead class="">
+                                    <tr>
+                                        <th>Email</th>
+                                        <th>Role</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>{{item.email}}</td>
+                                        <td>{{item.role === 0 ? "Administrator" : "Normal"}}</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th>Blocked</th>
+                                        <th>Date of Inscription</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Nope</td>
+                                        <td>{{item.created | dateFormat : 'L, HH[h]mm'}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="clear"></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
