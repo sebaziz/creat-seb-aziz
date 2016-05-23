@@ -4,7 +4,10 @@ angular.module('Creative', [
 	'ui-notification',
 	'ngFileUpload',
 	'infinite-scroll',
-	'angularUtils.directives.dirPagination'
+	'angularUtils.directives.dirPagination',
+	'angularFileUpload',
+	'ngCookies',
+	'ui.bootstrap'
 ])
 
 	.controller('MainCtrl', ['$scope', function ($scope) {
