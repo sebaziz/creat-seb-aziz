@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="client/404/404.css">
 
 </head>
-<body ng-controller="MainCtrl">
+<body ng-controller="MainCtrl" class="view-animate-container">
 
     <nav-bar> </nav-bar>
-    <div ng-view></div>
+    <div ng-view class="view-animate"></div>
 
     <!-- PACKAGES -->
     <script src="bower_components/moment/moment.js"></script>
@@ -40,16 +40,18 @@
     <script src="bower_components/ng-covervid/ngCovervid.min.js"></script>
     <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
 
-    <!-- SCRIPTS -->
+    <!-- OTHER PACKAGES -->
     <script src="client/js/angular-animate.js"></script>
     <script src="client/js/angular-cookies.js"></script>
     <script src="client/js/angular-file-upload.js"></script>
     <script src="client/js/ui-bootstrap-tpls-0.10.0.min.js"></script>
+
+    <!-- SCRIPTS -->
     <script src="client/config/app.js"></script>
     <script src="client/config/filters.js"></script>
     <script src="client/config/routes.js"></script>
     <script src="client/config/authService.js"></script>
-    <script src="client/config/albumservice.js"></script>   
+    <script src="client/config/uploadService.js"></script>
 
     <!-- CONTROLLERS -->
     <script src="client/home/homeCtrl.js"></script>

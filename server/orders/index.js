@@ -10,7 +10,7 @@ module.exports = function(app) {
 
 	// TEST UPLOAD
 	app.post('/api/upload', function(req, res) {
-		// use mongoose to get all orders in the database
+		// use mongoose to get all orders in the databmiase
 		console.log('req.body : ', req.body);
 		res.status(200).send('ok');
 	});

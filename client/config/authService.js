@@ -1,7 +1,7 @@
 
 angular.module('Creative')
-	.factory('AuthService', ['$q', '$timeout', '$http', '$rootScope', 'Notification',
-		function ($q, $timeout, $http, $rootScope, Notification) {
+	.factory('AuthService', ['$q', '$timeout', '$http', '$rootScope', 'Notification', 'albumProvider',
+		function ($q, $timeout, $http, $rootScope, Notification, albumProvider) {
 
 			// create user variable
 			var user = null,
@@ -78,8 +78,18 @@ angular.module('Creative')
 						// handle success
 						.success(function (data, status) {
 							if(status === 200 && data.status){
-								Notification.success({message: 'Enregistrement réussi!'});
-								deferred.resolve();
+								console.log("newUser : ", newUser);
+								var album = {
+									title: newUser.username,
+									name: newUser.username,
+									date: moment(new Date()).format("YYYY/MM/DD"),
+									description: "A user log"
+								};
+								albumProvider.addAlbum(album, function (err, album) {
+									//TODO :: do something with album ?
+									Notification.success({message: 'Enregistrement réussi!'});
+									deferred.resolve();
+								});
 							} else {
 								deferred.reject();
 							}

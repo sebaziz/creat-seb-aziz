@@ -7,7 +7,7 @@ module.exports = function(app, passport) {
 	require('./passport/index.js')(app, passport);
 	require('./orders/index.js')(app);
 	require('./comments/index.js')(app);
-	require('./test/testController.js')(app);
 	require('./upload/index.js')(app);
+	require('./test/testController.js')(app);
 
 };
