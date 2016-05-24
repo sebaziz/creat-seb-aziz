@@ -40,7 +40,6 @@ angular.module('Creative')
 
 			this.getPhotosForAlbum = function (name, callback) {
 				if (album_cache[name]) return callback(null, album_cache[name].photos);
-
 				$http.get("/v1/albums/" + name + "/photos.json")
 					.success(function (data, status, headers, conf) {
 						album_cache[name] = data;

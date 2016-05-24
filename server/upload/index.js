@@ -94,9 +94,12 @@ module.exports = function(app) {
 
 	app.get("/v1/albums/:album_name.json", function (req, res) {
 		var rpan  = req.params.album_name;
+		console.log("rpan: ", rpan);
 		var album = album_by_name(rpan);
-		if (!album)
+		if (!album) {
+			console.log("album : ", album);
 			return send_error_resp(res, 404, "not_found", "No such album");
+		}
 
 		return send_success_resp(res, album);
 	});
@@ -104,9 +107,12 @@ module.exports = function(app) {
 
 	app.get("/v1/albums/:album_name/photos.json", function (req, res) {
 		var rpan  = req.params.album_name;
+		console.log("rpan: ", rpan);
 		var album = album_by_name(rpan);
-		if (!album)
+		if (!album) {
+			console.log("album : ", album);
 			return send_error_resp(res, 404, "not_found", "No such album");
+		}
 
 		return send_success_resp(res, album.photos);
 	});

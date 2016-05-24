@@ -5,6 +5,7 @@ angular.module('Creative')
 			$scope.userStat = userResolve.getStatus();
 			if($scope.userStat) {
 				$scope.user = userResolve.getInfo();
+				$scope.album_name = userResolve.getInfo().username;
 			}
 
 			console.log("date with moment: ", moment(new Date()).format("YYYY/MM/DD"));
@@ -22,6 +23,7 @@ angular.module('Creative')
 				} else {
 					$scope.photos = photos;
 					$scope.uploader = albumProvider.getUploader($scope.album_name, $scope);
+					console.log('uploader : ', $scope.uploader);
 
 					$scope.uploader.bind("completeall", function (event, items) {
 						$scope.done_uploading = true;
@@ -30,6 +32,7 @@ angular.module('Creative')
 
 
 					$scope.uploader.bind("beforeupload", function (event, item) {
+						console.log("item : ", item);
 						var fn = _fix_filename(item.file.name);
 						var d = item.file.lastModifiedDate;
 						var dstr = d.getFullYear() + "/" + d.getMonth() + "/" + d.getDate();
